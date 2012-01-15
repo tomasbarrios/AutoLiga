@@ -1,0 +1,43 @@
+
+a {
+    color: #F067DB;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#header {
+    margin-bottom: 30px;
+    
+    /*background: url('../imagenes/ligamania-header.jpg') no-repeat   ;*/
+    width: 980px;
+    height: 150px;
+}
+
+#myFlash {
+display: block;
+	margin: 0 auto;
+}
+/*content*/
+#content {
+    min-height:500px;
+    background: url('../imagenes/ligamania-fondo.jpg') center top no-repeat;
+    margin-top: 0px;    
+}
+
+#menu li {
+    background: #333;
+    margin-bottom: 5px;
+    border-top: 2px solid grey;
+    border-left: 2px solid grey;
+    padding: 10px;
+    text-align:center;
+}
+
+#menu li a {
+    color: #F067DB;
+    text-decoration: none;   
+}
+
+th {
+    border: 2px solid white;
+}

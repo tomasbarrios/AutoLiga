@@ -1,0 +1,19 @@
+form {
+    text-align:start;
+    width: 90%;
+    margin: 0 auto;
+}
+form label{
+    float:left;
+    padding-top: 6px;
+    text-align:right;
+    margin-right: 20px;
+    width:100px
+}
+form #submit {
+    margin-left: 120px;
+}
+
+form p{
+    margin: 1em auto;
+}

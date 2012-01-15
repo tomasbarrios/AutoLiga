@@ -1,0 +1,37 @@
+th {
+	border: 1px solid green;
+}
+
+/*header*/
+
+#header a {
+    color: green;    
+}
+
+#header {
+    margin-bottom: 30px;
+    background: url('../imagenes/ligaelgol-header.png') no-repeat;
+    width: 980px;
+    height: 130px;
+}
+
+/*menu*/
+
+#menu li {
+    background: #333;
+    margin-bottom: 5px;
+    border-top: 2px solid grey;
+    border-left: 2px solid grey;
+    padding: 10px;
+    text-align:center;
+}
+
+#menu li a {
+    color: white;
+    text-decoration: none;   
+}
+
+#menu li a:hover {
+    text-decoration: underline;   
+}
+
