@@ -16,11 +16,11 @@ class Mail extends Controller {
         if ($this->form_validation->run() == FALSE ) {
             $this->layout->view('public/contacto_view');
         } else {   
-            $subject = 'Formulario Contacto '; 
-            $message = 'Nombre: '.$this->input->post('nombre').
-                                  '\nEmail: '.$this->input->post('email').
-                                  '\nTelefono: '.$this->input->post('telefono').
-                                  '\nMensaje: '.$this->input->post('mensaje');	
+            $subject = "Formulario Contacto "; 
+            $message = "Nombre: ".$this->input->post("nombre").
+                                  "\nEmail: ".$this->input->post("email").
+                                  "\nTelefono: ".$this->input->post("telefono").
+                                  "\nMensaje: ".$this->input->post("mensaje");	
             
             $this->send($subject, $message);
             $this->session->set_flashdata('ok','Gracias, te responderemos a la brevedad');
