@@ -1,0 +1,9 @@
+
+.buildpath
+system/logs/*.*
+imagenes/sponsors/*.*
+imagenes/ligas/*.*
+imagenes/uploads/*.*
+imagenes/equipos/
+*.DS_Store
+docs/
