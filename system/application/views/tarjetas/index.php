@@ -1,3 +1,9 @@
+
+<p class="breadcrum"><?php echo anchor('','Inicio') ?> > <?php echo $title ?></p>
+<h1 class="titulo">
+	<?php echo $title ?>
+</h1>
+
 <?php if (!empty($tarjetas)) :?>
 <table>
     <thead>

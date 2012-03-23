@@ -20,11 +20,13 @@ class Tarjetas extends Controller{
     }
 
     public function amarillas(){
+        $data['title'] = "Tarjetas Amarillas";
         $data['tarjetas'] = $this->incidente->get_incidentes('amarilla');
         $this->layout->view('tarjetas/index',$data);
     }
 
     public function rojas(){
+        $data['title'] = "Tarjetas Rojas";
         $data['tarjetas'] = $this->incidente->get_incidentes('roja');
         $this->layout->view('tarjetas/index',$data);
     }
