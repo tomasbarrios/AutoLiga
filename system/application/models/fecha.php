@@ -9,12 +9,14 @@ class Fecha extends Model {
 	
 	function get_public(){
 		$ultima = $this->get_siguiente_fecha();
-		if (empty($ultima)){
-		  $ultima = $this->get_ultima_fecha();
-		}
 		$this->db->where('id_liga',$this->liga->get_id_actual());    	
 		$this->db->where('id_temporada',$this->id_temporada);    	
-		$this->db->where('dia <= ', $ultima->dia);
+    if (!empty($ultima)) {
+		  $this->db->where('dia <= 1', $ultima->dia);
+	  }
+		else {
+		  $this->db->where('dia <= ', 'now()', false);
+		}
 		$this->db->order_by('dia','DESC');
 		$fechas = $this->db->get('fechas')->result();
 		log_message('debug',$this->db->last_query());
