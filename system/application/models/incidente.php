@@ -32,12 +32,14 @@ class Incidente extends MY_Model {
     	$this->db->select('count(incidentes.id_jugador) as incidentes,jugadores.nombre as nombre, equipos.nombre as equipo, equipos.id_equipo');
     	$this->db->join('jugadores','incidentes.id_jugador=jugadores.id_jugador');
     	$this->db->join('equipos','jugadores.id_equipo=equipos.id_equipo');
-    	$this->db->where('id_temporada' , $this->id_temporada);
+        $this->db->join('partidos','incidentes.id_partido=partidos.id_partido');
+    	$this->db->where('partidos.id_temporada' , $this->id_temporada);
     	$this->db->where('incidente', $incidente);
     	$this->db->group_by('nombre');
     	$this->db->order_by('incidentes', 'desc');
     
     	$tabla = $this->db->get('incidentes')->result();
+        log_message('DEBUG',$this->db->last_query());
     	if($this->db->affected_rows()>0) {
     		return $tabla;	
 		} else {
