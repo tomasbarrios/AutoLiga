@@ -1,14 +1,32 @@
-<link href="<?php echo base_url();?>css/form.css" rel="stylesheet" type="text/css" />
+<!-- <link href="<?php echo base_url();?>css/form.css" rel="stylesheet" type="text/css" /> -->
 <p class="breadcrum">
 <?php echo anchor('','Inicio') ?> > 
 <?php echo $title?></p>
-<h1 class="titulo"><?php echo $title?></h1>
-<?php
-    echo form_open('accounts')
-?>
+
 <?php if (authentication_errors()): ?>
-<p class="error"><?php echo authentication_errors(); ?></p>
+<div class="alert alert-error">
+	<?php echo authentication_errors(); ?>
+</div>	
 <?php endif; ?>
-<p><label for="username">Usuario</label><input type="text" name="username" value="" /></p>
-<p><label for="password"/>Contrase&ntilde;a</label><input type="password" name="password" value=""/></p>
-<p><input id="submit" type="submit" value="Log in"/></p>
+
+
+<?= form_open('accounts', array('class'=>'form-horizontal')) ?>
+  <fieldset>
+    <legend><?php echo $title?></legend>
+    <div class="control-group">
+      <label for="username" class="control-label">Usuario</label>
+      <div class="controls">
+        <input type="text" class="input-xlarge" id="username" name="username" value="" />        
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="password" class="control-label">Password</label>
+      <div class="controls">
+        <input type="password" class="input-xlarge" id="password" name="password" value="" />        
+      </div>
+    </div>    
+  </fieldset>
+  <div class="form-actions">
+    <button type="submit" class="btn btn-primary">Ingresar</button>    
+  </div>
+</form>

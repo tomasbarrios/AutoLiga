@@ -12,7 +12,7 @@ class Fecha extends Model {
 		$this->db->where('id_liga',$this->liga->get_id_actual());    	
 		$this->db->where('id_temporada',$this->id_temporada);    	
     if (!empty($ultima)) {
-		  $this->db->where('dia <= 1', $ultima->dia);
+		  $this->db->where('dia <= ', $ultima->dia);
 	  }
 		else {
 		  $this->db->where('dia <= ', 'now()', false);

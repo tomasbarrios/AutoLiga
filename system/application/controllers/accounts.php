@@ -8,13 +8,11 @@ class Accounts extends Controller {
     
     function index() {	
     	$url = 'admin';
-    	$this->firephp->info($url);	
-        if ($this->erkana_auth->validate_login('username')) {
-                $this->firephp->info('validado');
-                redirect($url);
+    	if ($this->erkana_auth->validate_login('username')) {
+            redirect($url);
         } else {
-                $data['title'] = 'Login';  
-                $this->layout->view('accounts/login', $data);
+            $data['title'] = 'Login';  
+            $this->layout->view('accounts/login', $data);
         }    
     }
     
@@ -28,8 +26,7 @@ class Accounts extends Controller {
 		$this->layout->view('accounts/nuevo_usuario_view', $data);
 	}
 	
-    function logout () {	
-    	
+    function logout () {
 		$this->session->unset_userdata('user_id');
 		redirect('home');
     }
