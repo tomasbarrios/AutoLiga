@@ -1,6 +1,20 @@
 
 /***************************** GENERAL ********************************/
    
+div#header {
+  
+}
+div#header #contacto{
+  margin-top: 10px;
+}
+div#header #contacto img {
+  
+}
+div#header #contacto h4 {
+  text-align:center;
+  padding:0.6em 0;
+}
+
 h1.central{
     margin-bottom: 10px;
     font-size: 1.5em;
@@ -138,19 +152,6 @@ h1>.opciones {
 	padding-left: 10px;
 }
 
-
-/***************************** HEADER ********************************/
-
-#header a {
-    color: green;    
-}
-
-#header {
-    margin-bottom: 30px;
-    background: url('../imagenes/fondo_OK_roller.png') no-repeat;
-    width: 980px;
-    height: 130px;
-}
 
 /***************************** MENU ********************************/
 
