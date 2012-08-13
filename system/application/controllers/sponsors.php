@@ -17,7 +17,6 @@ class Sponsors extends Controller{
 	function orden(){
 		$this->erkana_auth->required();
 		$filas = $this->input->post('filas');
-		$this->firephp->info($_POST);
 
 		foreach ($filas as $posicion => $id_sponsor){
 			if(!empty($id_sponsor)){
@@ -73,7 +72,7 @@ class Sponsors extends Controller{
     	if ($_FILES['imagen']['size']>0) {
             
             if ( $this->upload->do_upload('imagen') == FALSE){                    
-            	$this->firephp->info($this->upload->display_errors());
+            	log_message('DEBUG',$this->upload->display_errors());
 				return FALSE;        
             }
             else {            
@@ -109,8 +108,8 @@ class Sponsors extends Controller{
 		$config['create_thumb'] = TRUE;
 		$config['maintain_ratio'] = TRUE;
 		$config['width']	 = 300;
-		$config['height']	 = 1;		
-		$config['master_dim'] = 'width';		
+		$config['height']	 = 70;		
+		$config['master_dim'] = 'height';		
 		
 		$this->image_lib->initialize($config); 
 		
