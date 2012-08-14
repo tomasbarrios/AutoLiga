@@ -9,10 +9,11 @@ class Fecha extends Model {
 	
 	function get_public(){
 		$ultima = $this->get_siguiente_fecha();
+    // log_message('debug','Ultima fecha: '+$ultima);
 		$this->db->where('id_liga',$this->liga->get_id_actual());    	
 		$this->db->where('id_temporada',$this->id_temporada);    	
     if (!empty($ultima)) {
-		  $this->db->where('dia <= 1', $ultima->dia);
+		  $this->db->where('dia <= ', $ultima->dia);
 	  }
 		else {
 		  $this->db->where('dia <= ', 'now()', false);
