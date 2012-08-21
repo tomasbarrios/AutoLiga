@@ -25,14 +25,30 @@ html {
 	overflow-y: scroll;
 }
 
+div#container{
+  max-width:1000px;
+  margin: 0 auto;
+  }
+div#header{
+  width: 100%;
+  height: 150px;
+}
+div#contacto {
+  float:right;
+  width: 100px;
+}
 
 
-div#container{width:1000px;margin:0 auto}
-div#wrapper{float:left;width:100%}
-div#content{margin: 0 160px 0 170px; padding: 1em}
-div#menu{float:left;width:182px;margin-left:-1020px}
-div#extra{float:left;width:150px;margin-left:-150px}
-div#footer{clear:left;width:100%;text-align:center; padding: 20px}
+  div#content{
+    padding: 1em;
+    background-size:100%;
+  }
+  ul#banner-sponsors li{
+    width: 100px;
+    padding: 0 15px;
+  }
+
+div#footer{clear:both;width:100%; padding-top:1.5em;}
 
 td {
 	text-align:center;

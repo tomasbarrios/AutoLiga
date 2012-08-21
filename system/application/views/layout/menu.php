@@ -35,6 +35,9 @@
 
 <?php if (!empty($liga_session['facebook_fan_page'])):?>
 <!--
+
+  <div id="fb-root"></div>
+
 <script src="http://connect.facebook.net/es_CL/all.js#xfbml=1"></script>
 <fb:like-box href="<?php echo $liga_session['facebook_fan_page']?>" width="182" connections="10" stream="false" header="false"></fb:like-box>
 -->

@@ -6,11 +6,7 @@ a {
 }
 
 #header {
-    margin-bottom: 30px;
     
-    /*background: url('../imagenes/ligamania-header.jpg') no-repeat   ;*/
-    width: 980px;
-    height: 150px;
 }
 
 #myFlash {
@@ -18,9 +14,10 @@ display: block;
 	margin: 0 auto;
 }
 /*content*/
-#content {
+div#content {
     min-height:500px;
     background: url('../imagenes/ligamania-fondo.jpg') center top no-repeat;
+    background-size: 100%;
     margin-top: 0px;    
 }
 
